@@ -1,0 +1,70 @@
+{
+  "name": "stylelint-color-control",
+  "version": "1.0.0",
+  "description": "Control color usage in CSS",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "csstools/stylelint-color-control",
+  "homepage": "https://github.com/csstools/stylelint-color-control#readme",
+  "bugs": "https://github.com/csstools/stylelint-color-control/issues",
+  "main": "index.js",
+  "module": "index.mjs",
+  "files": [
+    "index.js",
+    "index.js.map",
+    "index.mjs",
+    "index.mjs.map",
+    ".*",
+    "*"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "pretest": "rollup -c .rollup.js --silent",
+    "test": "npm run test:js && npm run test:tape",
+    "test:js": "eslint src/*.js --cache --ignore-path .gitignore --quiet",
+    "test:tape": "stylelint-tape"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-dev": "^2.0.0",
+    "pre-commit": "^1.2.2",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "stylelint": "^9.10.1",
+    "stylelint-tape": "^1.0.1"
+  },
+  "peerDependencies": {
+    "stylelint": "^9.10.1"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "limits",
+    "colors",
+    "indistinguishable",
+    "similar",
+    "equivalent",
+    "comparible",
+    "identical",
+    "related",
+    "congruent",
+    "maintain",
+    "differences",
+    "CIEDE2000",
+    "algorithm",
+    "rgb",
+    "lab",
+    "palette",
+    "detect",
+    "fix"
+  ]
+}
